@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #f9f9f9;
+  --ink: #111111;
+  --muted: #5c5c5c;
+  --pink: #ff2d78;
+  --pink-hover: #e8256a;
+  --navy: #1b365d;
+  --teal: #00bfa5;
+  --line: #e6e6e6;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-pink: var(--pink);
+  --color-pink-hover: var(--pink-hover);
+  --color-navy: var(--navy);
+  --color-teal: var(--teal);
+  --color-line: var(--line);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--pink) 24%, white);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 50;
+  border-radius: 999px;
+  background: var(--ink);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
