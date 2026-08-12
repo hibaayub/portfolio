@@ -11,7 +11,7 @@ export function AboutContent() {
         <FadeIn>
           <div className="relative aspect-square overflow-hidden rounded-[2rem] bg-[#d7e4ef]">
             <Image
-              src="/images/portrait.svg"
+              src="/images/personal-pic.png"
               alt="Portrait of Hiba Ayub"
               fill
               preload
