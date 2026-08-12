@@ -1,7 +1,7 @@
 export const datahubCaseStudy = {
   slug: "datahub",
   eyebrow: "Design System · Internship · Data Science Research Services",
-  title: "From Chaos to Consistency: Building a Design System for DSRS DataHub",
+  title: "Building a Design System for DSRS DataHub",
   hook: "I inherited a website with no standards, no components, and no consistency. I built the foundation to fix it.",
   problem: [
     "The DSRS DataHub had grown page by page without a shared visual language. There were no documented standards, no reusable components, and no consistent way to present datasets, services, or research tools.",
@@ -63,15 +63,15 @@ export const datahubCaseStudy = {
     "A design system is less about pretty components and more about making the next page easier than the last. Consistency is a team sport: the system only works if people can find the pattern, understand why it exists, and reuse it without asking.",
   gallery: [
     {
-      src: "/images/datahub-home.png",
+      src: "/images/data-intro.png",
       alt: "DSRS DataHub homepage after the design system, with a navy header, clear hero, and orange actions.",
     },
     {
-      src: "/images/datahub-catalog.png",
+      src: "/images/data-access.png",
       alt: "Data catalog interface with searchable dataset cards and consistent metadata.",
     },
     {
-      src: "/images/datahub-intro.png",
+      src: "/images/dataset-overview.png",
       alt: "DataHub introduction documentation page with a table of contents and structured content.",
     },
   ],
