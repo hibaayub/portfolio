@@ -49,5 +49,5 @@ These were locked so the rebuild could ship without blocking on missing source f
 - Framer is the visual source of truth (layout, color, type, two pink pill buttons, navy work card, pink about heading, teal “Interests” label).
 - Lovable supplies copy and structure the Framer file did not fully contain (about paragraphs, work index, coming-soon projects, richer case study title and hook).
 - Interest tags use Lovable content (`Gaming`, `Reading`, `Bedazzling`) with Framer’s pink pills.
-- Case study body copy is reconstructed from the visible Framer/Lovable sections plus public DSRS context. Replace any line that does not match your voice.
+- Case study body copy lives in each route’s `page.tsx` (see `src/app/work/datahub/page.tsx`). Edit it there. Shared case-study UI lives in `src/components/case-study/`.
 - No contact form was in either source, so the footer only links to LinkedIn.
