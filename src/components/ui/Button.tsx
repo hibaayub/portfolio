@@ -22,7 +22,7 @@ export function Button({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium transition-colors duration-200 ${styles} ${className}`}
+      className={`inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium transition duration-200 hover:scale-[1.02] ${styles} ${className}`}
     >
       {children}
     </Link>

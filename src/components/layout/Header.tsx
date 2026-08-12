@@ -26,7 +26,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm tracking-wide transition-colors hover:text-pink ${
+                className={`text-sm tracking-[0.04em] transition-colors hover:text-pink ${
                   active ? "font-semibold text-ink" : "font-medium text-ink/80"
                 }`}
                 aria-current={active ? "page" : undefined}

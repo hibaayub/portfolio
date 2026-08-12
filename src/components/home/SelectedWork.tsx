@@ -19,7 +19,7 @@ export function SelectedWork() {
           href={featuredProject.href ?? "/work"}
           className="group block overflow-hidden rounded-2xl bg-white shadow-[0_8px_30px_rgba(17,17,17,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(17,17,17,0.1)]"
         >
-          <div className="flex min-h-[240px] items-center justify-center bg-navy sm:min-h-[320px] lg:min-h-[380px]">
+          <div className="flex min-h-[220px] items-center justify-center bg-navy sm:min-h-[280px] lg:min-h-[320px]">
             <p className="text-2xl font-bold text-white sm:text-4xl">
               {featuredProject.title}
             </p>

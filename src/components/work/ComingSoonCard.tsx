@@ -3,7 +3,7 @@ import type { Project } from "@/data/projects";
 
 export function ComingSoonCard({ project }: { project: Project }) {
   return (
-    <article className="rounded-2xl border border-dashed border-ink/20 bg-white/60 p-6 sm:p-8">
+    <article className="rounded-2xl border-2 border-dashed border-ink/20 bg-white/60 p-6 sm:p-8">
       <Tag tone="muted">{project.tags.join(" · ")}</Tag>
       <h3 className="mt-6 text-2xl font-bold tracking-tight text-ink">
         {project.title}
