@@ -9,7 +9,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         Skip to content
       </a>
       <Header />
-      <main id="main" className="flex-1">
+      <main id="main" className="w-full flex-1">
         {children}
       </main>
       <Footer />
