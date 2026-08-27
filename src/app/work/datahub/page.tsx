@@ -63,7 +63,7 @@ export default function DatahubCaseStudyPage() {
       <CaseStudySection id="building" title="Building">
         <Prose>
           <p>
-            I turned the audit into a small, copyable system — components with a
+            I turned the audit into a small, copyable system; components with a
             clear job, so the next page would be easier than the last.
           </p>
         </Prose>
@@ -87,7 +87,7 @@ export default function DatahubCaseStudyPage() {
       </CaseStudySection>
 
       <FadeIn className="mt-14 sm:mt-20">
-        <ScreenshotGrid>
+        <ScreenshotGrid columns={1}>
           <Screenshot
             src="/images/data-intro.png"
             alt="DSRS DataHub homepage after the design system, with a navy header, clear hero, and orange actions."

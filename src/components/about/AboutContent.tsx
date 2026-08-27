@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-const interests = ["Gaming", "Reading", "Bedazzling"];
+const interests = ["Gaming", "Reading", "Puzzles"];
 
 export function AboutContent() {
   return (
@@ -29,21 +29,17 @@ export function AboutContent() {
           </FadeIn>
           <FadeIn delay={0.14} className="mt-6 space-y-5 text-base leading-7 text-ink sm:text-lg sm:leading-8">
             <p>
-              I have been a gamer my whole life. One of my earliest product
-              memories is the Xbox 360 Kinect. Your body being the controller
-              felt like magic. Then came The Sims: infinite customization,
-              decision-making, and building. Now, I have stepped into the world
-              of puzzles: logic, thinking, strategy.
-            </p>
-            <p>
-              I had been noticing design my whole life without realizing it.
-              What made a game feel good. What made a UI feel dated. What made
-              you want to keep playing. Now, I want to implement those thoughts
-              by designing products that are fair, accessible, and easy to use.
+              I'm currently an Associate at PwC in Tech Consulting, where I get to sit at 
+              the intersection of user experience, business strategy, and technology 
+              implementation. I'm passionate about building products that prioritize the user
+              experience. I love understanding how UI/UX connects to business objectives, and 
+              how that translates into technology that actually works for the people using it. 
+              I'm always looking for ways to grow, refine my skills, and understand design and 
+              development more deeply.
             </p>
           </FadeIn>
           <FadeIn delay={0.2} className="mt-10">
-            <h2 className="text-sm font-medium tracking-wide text-teal">
+            <h2 className="text-lg font-medium tracking-wide text-black">
               Interests
             </h2>
             <ul className="mt-4 flex flex-wrap gap-3">

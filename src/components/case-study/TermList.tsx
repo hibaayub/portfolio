@@ -15,7 +15,7 @@ export function Term({
 }) {
   return (
     <li className="text-base leading-7 text-ink/90 sm:text-lg sm:leading-8">
-      <span className="font-bold">{name}</span>—{children}
+      <span className="font-bold">{name}</span>: {children}
     </li>
   );
 }
