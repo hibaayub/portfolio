@@ -63,3 +63,137 @@ body {
     scroll-behavior: auto;
   }
 }
+
+.avatar-stage {
+  --avatar-figure-height: 372px;
+  --avatar-shift-x: 50%;
+  --avatar-shift-extra: 18px;
+  --avatar-floor: 14px;
+  height: 420px;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+@media (min-width: 640px) {
+  .avatar-stage {
+    --avatar-figure-height: 508px;
+    --avatar-shift-x: 196px;
+    --avatar-shift-extra: 0px;
+    --avatar-floor: 18px;
+    height: 560px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .avatar-stage {
+    --avatar-shift-x: 252px;
+  }
+}
+
+.avatar-slot {
+  transform: translate3d(
+    calc(
+      var(--pos) * var(--avatar-shift-x) + var(--pos) * var(--avatar-shift-extra)
+    ),
+    0,
+    0
+  );
+  transition: transform 600ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.avatar-figure-wrap {
+  bottom: var(--avatar-floor);
+  transform: translateX(-50%) scale(var(--scale, 1));
+  transform-origin: bottom center;
+  transition:
+    transform 600ms cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 600ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.avatar-slot[data-instant="true"],
+.avatar-figure-wrap[data-instant="true"] {
+  transition: none;
+}
+
+.avatar-shadow {
+  position: absolute;
+  left: 50%;
+  z-index: 0;
+  width: 112px;
+  height: 16px;
+  border-radius: 999px;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(17, 17, 17, 0.4) 0%,
+    rgba(17, 17, 17, 0.14) 52%,
+    transparent 72%
+  );
+  bottom: calc(var(--avatar-floor) - 8px);
+  transform: translate3d(-50%, 0, 0);
+  animation: avatar-shadow 3.6s ease-in-out infinite;
+}
+
+@media (min-width: 640px) {
+  .avatar-shadow {
+    width: 152px;
+    height: 18px;
+  }
+}
+
+.avatar-float {
+  animation: avatar-float 3.6s ease-in-out infinite;
+}
+
+.avatar-caption {
+  animation: avatar-caption-in 600ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes avatar-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@keyframes avatar-shadow {
+  0%,
+  100% {
+    transform: translate3d(-50%, 0, 0) scaleX(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate3d(-50%, 0, 0) scaleX(0.78);
+    opacity: 0.55;
+  }
+}
+
+@keyframes avatar-caption-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-slot,
+  .avatar-figure-wrap,
+  .avatar-caption {
+    animation: none;
+    transition: none;
+  }
+
+  .avatar-float,
+  .avatar-shadow {
+    animation: none;
+  }
+}

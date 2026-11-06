@@ -1,3 +1,4 @@
+import { AvatarCarousel } from "@/components/home/AvatarCarousel";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -11,10 +12,13 @@ export function Hero() {
           intuitive, accessible, and easy to use.
         </h1>
       </FadeIn>
-      <FadeIn delay={0.12} className="mt-10 flex flex-wrap gap-3">
+      <FadeIn delay={0.12} className="mt-8 flex flex-wrap gap-3 sm:mt-10">
         <Button href="/work">See my Work</Button>
         <Button href="/about">About Me</Button>
       </FadeIn>
+      <div className="mt-10 sm:mt-14">
+        <AvatarCarousel />
+      </div>
     </Container>
   );
 }
